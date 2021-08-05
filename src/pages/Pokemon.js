@@ -24,7 +24,7 @@ export default function PokemonPage() {
 
     function togglePokemon() {
         if (pokemon.inMyPokemons) {
-            axios.post(`${process.env.REACT_APP_API_BASE_URL}/my-pokemons/${id}/remove`, null, {
+            axios.post(`https://back-end-pokedex.herokuapp.com/my-pokemons/${id}/remove`, null, {
                 headers: {
                     Authorization: `Bearer ${token.token}`
                 }
@@ -32,7 +32,7 @@ export default function PokemonPage() {
                 updatePokemons();
             });
         } else {
-            axios.post(`${process.env.REACT_APP_API_BASE_URL}/my-pokemons/${id}/add`, null, {
+            axios.post(`https://back-end-pokedex.herokuapp.com/my-pokemons/${id}/add`, null, {
                 headers: {
                     Authorization: `Bearer ${token.token}`
                 }

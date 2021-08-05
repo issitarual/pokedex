@@ -15,7 +15,7 @@ export function PokemonsProvider({ children }) {
     }, [token?.token]);
 
     function updatePokemons() {
-        axios.get(`${process.env.REACT_APP_API_BASE_URL}/pokemons`, {
+        axios.get(`https://back-end-pokedex.herokuapp.com/pokemons`, {
             headers: {
                 Authorization: `Bearer ${token?.token}`
             }
