@@ -62,7 +62,7 @@ export default function PokemonPage() {
                                 <PokemonContainer>
                                     <img src={pokemon.image} alt={pokemon.name} />
                                     <span className="name">{pokemon.name}</span>
-                                    <span className="id">#{id}</span>
+                                    <span className="id">#{pokemon.number}</span>
                                 </PokemonContainer>
                                 <NavButton>
                                     {(id < 893) && (
